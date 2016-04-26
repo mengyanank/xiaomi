@@ -37,5 +37,5 @@ class XiaomiSpider(scrapy.Spider):
             item['name']=app.xpath('.//h5/a/text()').extract_first().encode('utf-8')
             item['url']=app.xpath('.//h5/a/@href').extract()
             item['category']=app.xpath('.//p/a/text()').extract_first().encode('utf-8')
-            print item['category']," ",item['name']
+            //print item['category']," ",item['name']
             yield item
